@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-books',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor,FormsModule],
   templateUrl: './books.component.html',
   styleUrl: './books.component.css'
 })
 export class BooksComponent {
+  
 books=[
   {id:1,title:"Jack and Rose",author:"Hemgoe",description:"Love story of jack and Rose",price:200000,category:"love story",uploadedBook:"sweetBook"},
   {id:2,title:"Romeo na Julliette",author:"Hemgoe",description:"Love story of Romeo and Juliette",price:15000,category:"love story",uploadedBook:"sweetBook"},
@@ -25,6 +27,14 @@ deleteBook(id:number){
 updateBook(id:number){
  let book=this.books.find(book=>book.id==id)
  if(book){
-  book.title=""
+  book.title=
+  book.author="uauthor we"
+  book.description="description we"
+  book.price=5000,
+  book.category="category we"
+  book.uploadedBook="book we"
+  console.log("book updated successfuly",this.books)
+  alert("Book updated successfully")
  }
+}
 }

@@ -24,7 +24,7 @@
           <td>{{ book.category }}</td>
           <td>{{ book.uploadedBook }}</td>
           <td>
-            <button class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#editBookModal">Update</button>
+            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editBookModal">Update</button>
             <button class="btn btn-danger" (click)="deleteBook(book.id)">Delete</button>
           </td>
         </tr>
@@ -74,7 +74,7 @@
 
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" (click)="updateBook(book.id)">Update Book</button>
+                <button class="btn btn-primary" data-bs-dismiss="modal" (click)="updateBook(book.id)">Update Book</button>
               </div>
             </form>
           </div>
