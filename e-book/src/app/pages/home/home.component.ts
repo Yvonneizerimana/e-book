@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
+  imageUrl="https://www.shutterstock.com/image-photo/stack-books-against-background-library-600nw-2459213053.jpg"
 }
+

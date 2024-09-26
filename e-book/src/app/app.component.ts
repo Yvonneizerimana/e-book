@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./pages/header/header.component";
 import { LinksComponent } from "./pages/links/links.component";
-import { Body1Component } from './pages/body1/body1.component';
+import { HomeComponent } from "./pages/home/home.component";
 import { FooterComponent } from './pages/footer/footer.component';
 
 @Component({
@@ -12,7 +12,7 @@ import { FooterComponent } from './pages/footer/footer.component';
     RouterOutlet,
     HeaderComponent,
     LinksComponent,
-    Body1Component,
+    HomeComponent,
     FooterComponent,
   ],
   templateUrl: './app.component.html',
