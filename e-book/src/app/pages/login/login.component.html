@@ -1,1 +1,41 @@
-<p>login works!</p>
+<div class="loginsystem">
+
+    <div class="row">
+        <div class="col-6">
+            <h2 class="login">LOGIN</h2>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <form class="form-group" #login="ngForm" (ngSubmit)="onSubmit()">
+            <div>
+            <label for="username">username</label>
+            <input type="email" name="username" [(ngModel)]="credentials.username" #ngUser="ngModel" class="form-control" required>
+             <div class="text-danger">
+             @if(ngUser.errors?.['required']){
+                <span>*</span>
+             }
+             @else if(ngUser.errors?.['email']){
+                <span>Invalid email format</span>
+             }
+             </div>
+            </div>
+            <div>
+            <label for="password">password</label>
+            <input type="password" name="password" class="form-control" [(ngModel)]="credentials.password"  #ngPass="ngModel" required pattern="/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g">
+            <div class="text-danger">
+                @if(ngPass.errors?.['required']){
+                   <span>*</span>
+                }
+                @else if(ngPass.errors?.['pattern']){
+                   <span>I think your password is strong</span>
+                }
+                </div>
+        </div><br>
+            <div>
+            <button class="btn btn-warning" (click)="cancelThis()" >Cancel</button>
+            <button type="submit" class="btn btn-danger" (click)="onSubmit()">Login</button>
+            </div><br>
+        </form>
+    </div>
+</div>
