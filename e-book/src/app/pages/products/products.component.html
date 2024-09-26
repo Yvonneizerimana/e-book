@@ -16,7 +16,15 @@
           <form (ngSubmit)="onSubmit()" #bookForm="ngForm">
             <div class="mb-3">
               <label for="title" class="form-label">Title</label>
-              <input type="text" id="title" class="form-control" required [(ngModel)]="book.title" name="title" />
+              <input type="text" id="title" class="form-control" #title="ngModel" required minlength="3" [(ngModel)]="book.title" name="title" />
+            <div class="text-danger">
+             @if(title.touched && title.errors?.['required']){
+              <span>*</span>
+             }
+            @else if (title.errors?.['minlength']) {
+              <span>minlength is 3</span>
+            }
+            </div>
             </div>
             <div class="mb-3">
               <label for="author" class="form-label">Author</label>
