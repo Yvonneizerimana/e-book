@@ -38,4 +38,32 @@
             </div><br>
         </form>
     </div>
+
+    <div class="row">
+        <div class="col-8 displayUsers">
+            <h1>List of all users</h1>
+        </div>
+        <div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>SubType</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        <tr *ngFor="let user of listOfUsers">
+                            <td>{{user.name}}</td>
+                            <td>{{user.gender}}</td>
+                            <td>{{user.subType}}</td>
+                            <td>{{user.status}}</td>
+                        </tr>
+                    </tbody>
+               
+            </table>
+          
+        </div>
+    </div>
 </div>
