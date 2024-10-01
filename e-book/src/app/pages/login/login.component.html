@@ -7,7 +7,7 @@
     </div>
 
     <div class="col-6">
-        <form class="form-group" #login="ngForm" (ngSubmit)="onSubmit()">
+        <form class="form-floating" #login="ngForm" (ngSubmit)="onSubmit()">
             <div>
             <label for="username">username</label>
             <input type="email" name="username" [(ngModel)]="credentials.username" #ngUser="ngModel" class="form-control" required>

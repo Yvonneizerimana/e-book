@@ -1,6 +1,14 @@
-.product{
-    margin-top: 3%;
+.product {
+    margin: 3% 3% 3% 0; /* top, right, bottom, left */
     text-align: right;
-    margin-bottom: 3%;
-    margin-right: 3%;
+    font-size: 1.2rem; /* Adjust size as needed */
+    color: #333; /* Change to desired text color */
+}
+
+/* Optional: Responsive design adjustments */
+@media (max-width: 768px) {
+    .product {
+        margin: 2rem 1rem; /* Adjust margins for smaller screens */
+        font-size: 1rem; /* Adjust font size for readability */
+    }
 }
