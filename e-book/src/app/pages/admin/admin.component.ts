@@ -20,9 +20,10 @@ export class AdminComponent {
   constructor(private userService: userService) {}
 
   onCreate() {
-    // Call the userService to create a new user
+    
     this.userService.createUser(this.name, this.gender, this.subType, this.status);
-    // Reset form fields if needed
+    
+    alert("User created")
     this.name = '';
     this.gender = '';
     this.subType = '';
