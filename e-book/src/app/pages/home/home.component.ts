@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
+import { PhotoComponent } from './photo/photo.component';
+
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [PhotoComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  imageUrl="https://www.shutterstock.com/image-photo/stack-books-against-background-library-600nw-2459213053.jpg"
+  
 }
 
