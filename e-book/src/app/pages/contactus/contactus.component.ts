@@ -24,7 +24,7 @@ export class ContactusComponent {
 
 constructor(@Inject(API_CONFIG_TOKEN) public config:configs){
   this.configuration=this.config.apiTitle +"   "+ this.config.apiUrl
-  console.log(this.configuration)
+
 }
 
 }
