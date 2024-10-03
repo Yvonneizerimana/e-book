@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { userService } from '../../services/user.service';
+import { UserService } from '../../services/user.service';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -17,7 +17,7 @@ export class AdminComponent {
 
 
 
-  constructor(private userService: userService) {}
+  constructor(private userService: UserService) {}
 
   onCreate() {
     

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { userService } from '../../services/user.service';
+import { UserService } from '../../services/user.service';
 import { NgFor } from '@angular/common';
-
+import { User } from '../../models/user';
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -13,7 +13,7 @@ import { NgFor } from '@angular/common';
 })
 export class LoginComponent {
 listOfUsers:any=''
-  constructor(private userService:userService){
+  constructor(private userService:UserService){
       
   this.listOfUsers=userService.getAllUsers();
   console.log(this.listOfUsers) 
@@ -40,6 +40,9 @@ listOfUsers:any=''
         this.credentials={username: '', password: ''}
       }
 
-    
+      showUserDetails(user:User){
+        this.userService.onShowUserDetails(user)
+        
+      }
       
 }

@@ -1,0 +1,13 @@
+@if(selectedUser){
+    <h3>User Details</h3>
+    <p><strong>Name:</strong> {{ selectedUser.name }}</p>
+    <p><strong>Gender:</strong> {{ selectedUser.gender }}</p>
+    <p><strong>SubType:</strong> {{ selectedUser.subType }}</p>
+    <p><strong>Status:</strong> {{ selectedUser.status }}</p>
+}
+  
+  @else{
+    <p>No user selected.</p>
+  }
+  
+  
