@@ -41,7 +41,9 @@ listOfUsers:any=''
       }
 
       showUserDetails(user:User){
-        this.userService.onShowUserDetails(user)
+       
+       this.userService.onShowUserDetails(user)
+       
         
       }
       

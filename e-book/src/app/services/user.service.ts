@@ -34,7 +34,9 @@ export class UserService {
    onUserDetailsClicked:EventEmitter<User>=new EventEmitter<User>();
 
    onShowUserDetails(user:User){
-    this.onUserDetailsClicked.emit(user);
+  
+    this.onUserDetailsClicked.emit(user)
+   
    }
 
 }

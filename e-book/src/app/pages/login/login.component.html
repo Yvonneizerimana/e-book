@@ -51,7 +51,7 @@
                         <th>Gender</th>
                         <th>SubType</th>
                         <th>Status</th>
-                        <th>More info</th>
+                        
                     </tr>
                 </thead>
                     <tbody>
@@ -59,8 +59,8 @@
                             <td>{{user.name}}</td>
                             <td>{{user.gender}}</td>
                             <td>{{user.subType}}</td>
-                            <td>{{user.status}}</td>
-                            <td><button class="btn btn-warning" (click)="showUserDetails(user)">+</button></td>
+                            <td>{{user.status}}
+                            <button class="btn btn-warning" (click)="showUserDetails(user)">+</button></td>
                         </tr>
                     </tbody>
                

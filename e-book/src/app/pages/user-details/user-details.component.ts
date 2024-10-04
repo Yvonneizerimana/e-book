@@ -2,24 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { User } from '../../models/user';
 
-
 @Component({
   selector: 'app-user-details',
   templateUrl: './user-details.component.html',
   styleUrls: ['./user-details.component.css'],
-  
 })
 export class UserDetailsComponent implements OnInit {
+  constructor(private userService: UserService){}
+
   selectedUser: User | null = null;
-
-  // Correctly inject UserService in the constructor
-  constructor(private userService: UserService) {}
-
-  ngOnInit() {
-    // Subscribe to the EventEmitter in the service to receive user details
-    this.userService.onUserDetailsClicked.subscribe((user: User) => {
-      this.selectedUser = user; // Store the received user details
-      console.log(this.selectedUser); // Debugging output
-    });
-  }
+  
+    ngOnInit() {
+      // Subscribe to the event emitter in UserService
+      this.userService.onUserDetailsClicked.subscribe((data: User) => {
+        console.log('Received user:', data); // Log to verify data reception
+        this.selectedUser = data; // Assign the received user
+      });
+    
+    }
 }
